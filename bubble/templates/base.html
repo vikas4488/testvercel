@@ -1,0 +1,72 @@
+{%load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'loginsignup.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'flowerhome.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'loading.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'cart.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'myorders.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'main.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'profile.css' %}">
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script>
+      csrfToen='{{csrf_token}}';
+      const firebaseConfig = {
+          apiKey: "AIzaSyCGppPrvUXcgpUK5bJmQ25qbvr7CcagOto",
+          authDomain: "plant-10a6f.firebaseapp.com",
+          projectId: "plant-10a6f",
+          storageBucket: "plant-10a6f.appspot.com",
+          messagingSenderId: "668285551352",
+          appId: "1:668285551352:web:0430c304427c57f5de310d",
+          measurementId: "G-Q4JQXM5TM1"
+        };
+      firebase.initializeApp(firebaseConfig);
+  </script>
+    <script type="text/javascript" src="{% static 'jquery-3.7.1.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'flowerhome.js' %}"></script>
+    <script type="text/javascript" src="{% static 'profile.js' %}"></script>
+    <script type="text/javascript" src="{% static 'loginsignup.js' %}"></script>
+    <script type="text/javascript" src="{% static 'cart.js' %}"></script>
+    <title>Flower Home</title>
+  </head>
+  <body>
+  	<header>
+  	</header>
+  	<main>
+      <script>
+        var user_authenticated ='{{request.user.is_authenticated}}' ;
+      </script>
+{% if request.user.is_authenticated %}
+<div class="user_full_wrap">
+  <div class="user_full_text">
+  Welcome {{ request.user.get_full_name }}
+  </div>
+</div>
+ {% endif %}
+ {% include "header.html" %}	    
+	    {%block content%} 
+	    {%endblock content%}
+      {% include "loginsignup.html" %}
+      <div class="lbg">
+        <div class="loading_background">
+          <div class="loader"><div>
+        </div>
+    </div>
+  	</main>
+	
+  </body>
+  {% include "sidemenu.html" %}
+  {% include "profile.html" %}
+  <script>
+    var fav_form_url='{% url 'favurl' %}';
+    var cart_form_url='{% url 'carturl' %}';
+    var cart_page_url='{% url 'cart' %}';
+    var fav_page_url='{% url 'favpage' %}';
+    var catss='{{ catss|default:"" }}';
+    var subcatss='{{ subcatss|default:"" }}';
+  </script>
+</html>
