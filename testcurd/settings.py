@@ -119,11 +119,11 @@ DATABASES = {
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': os.environ["MYSQLDATABASE"],
-        'USER': os.environ["MYSQLUSER"],
-        'PASSWORD': os.environ["MYSQLPASSWORD"],
-        'HOST': os.environ["MYSQLHOST"],
-        'PORT': os.environ["MYSQLPORT"],
+        'NAME': 'railway',
+        'USER': 'root',
+        'PASSWORD': 'DCDAsHzXVVAfHBanQvBuGvCLcbJPCDvO',
+        'HOST': 'mysql.railway.internal',
+        'PORT': '3306',
     }
 }
 
