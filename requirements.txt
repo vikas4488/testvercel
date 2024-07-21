@@ -31,7 +31,6 @@ msgpack==1.0.8
 mypy-extensions==1.0.0
 packaging==24.1
 phonepe==1.0.1
-phonepe-sdk==1.1.0
 pillow==10.3.0
 proto-plus==1.24.0
 protobuf==4.25.3
@@ -56,3 +55,4 @@ tzdata==2024.1
 tzlocal==5.2
 uritemplate==4.1.1
 urllib3==1.26.12
+phonepe-sdk==1.1.0
