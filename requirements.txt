@@ -29,7 +29,6 @@ marshmallow==3.21.3
 marshmallow-enum==1.5.1
 msgpack==1.0.8
 mypy-extensions==1.0.0
-mysqlclient==2.2.4
 packaging==24.1
 phonepe==1.0.1
 phonepe-sdk==1.1.0
