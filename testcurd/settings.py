@@ -33,7 +33,7 @@ SECRET_KEY = 'django-insecure-vt8z9=akmxf0dpo)nvgll+n!^4@))iq3uz0s(1nx4a&#g&$@+a
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
-
+"""
 ALLOWED_HOSTS = [
     'vikas04488.pythonanywhere.com',
     'https://vikas04488.pythonanywhere.com',# Replace with your actual domain
@@ -43,7 +43,8 @@ ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
 ]
-
+"""
+ALLOWED_HOSTS = [*]
 
 # Application definition
 
@@ -116,12 +117,12 @@ DATABASES = {
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': os.environ["PGDATABASE"],
-        'USER': os.environ["PGUSER"],
-        'PASSWORD': os.environ["PGPASSWORD"],
-        'HOST': os.environ["PGHOST"],
-        'PORT': os.environ["PGPORT"],
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': os.environ["MYSQLDATABASE"],
+        'USER': os.environ["MYSQLUSER"],
+        'PASSWORD': os.environ["MYSQLPASSWORD"],
+        'HOST': os.environ["MYSQLHOST"],
+        'PORT': os.environ["MYSQLPORT"],
     }
 }
 
