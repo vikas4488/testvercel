@@ -142,7 +142,7 @@ def phonepecallback(request):
             print(f"Form get data: {request.GET}")
             print(f"Form post data: {request.POST}")
             #remove the below line if got the above data
-            return render(request, 'success.html', {"transaction_id": "faketrid","providerReferenceId":"ZZFAKEPHONEPETRID"})
+            #return render(request, 'success.html', {"transaction_id": "faketrid","providerReferenceId":"ZZFAKEPHONEPETRID"})
             # Extract necessary data from form-encoded request body
             transaction_id = request.POST.get('transactionId')
             merchant_id=request.POST.get('merchantid')

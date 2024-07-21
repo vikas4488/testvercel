@@ -190,7 +190,7 @@ PHONEPE_MID = 'PGTESTPAYUAT77'
 PHONEPE_SALT_INDEX = '1'
 PHONEPE_SALT_KEY = '14fa5465-f8a7-443f-8477-f986b8fcfde9'
 PHONEPE_BASE_URL = 'https://api-preprod.phonepe.com/apis/pg-sandbox'
-PHONEPE_REDIRECT_URL = 'https://vikas04488.pythonanywhere.com/callback'
-
+PHONEPE_REDIRECT_URL = 'https://railway-production-0aed.up.railway.app/callback'
+CSRF_TRUSTED_ORIGINS = ['https://*.railway.app']
 handler404 = 'bubble.views.custom_404'
 
