@@ -55,4 +55,3 @@ tzdata==2024.1
 tzlocal==5.2
 uritemplate==4.1.1
 urllib3==1.26.12
-phonepe-sdk==1.1.0
