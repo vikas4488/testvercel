@@ -163,12 +163,12 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 #STATICFILES_DIRS = [os.path.join(BASE_DIR, '/static')] 
-STATICFILES_DIRS = '/app/plantstorage/static'
+STATICFILES_DIRS = '/railway/static'
 #STATIC_ROOT = os.path.join(BASE_DIR, '/staticfiles')
-STATIC_ROOT = '/app/plantstorage/staticfiles'
+STATIC_ROOT = '/railway/staticfiles'
 MEDIA_URL = '/media/'
 #MEDIA_ROOT = os.path.join(BASE_DIR, '/media/')
-MEDIA_ROOT = '/app/plantstorage/media/'
+MEDIA_ROOT = '/railway/media/'
 
 #STATIC_URL = 'static/'
 #STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
