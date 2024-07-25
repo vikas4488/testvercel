@@ -171,7 +171,8 @@ STATICFILES_DIRS = [
 STATIC_ROOT = '/railway/staticfiles'
 MEDIA_URL = '/media/'
 #MEDIA_ROOT = os.path.join(BASE_DIR, '/media/')
-MEDIA_ROOT = os.path.join('/railway', 'media')
+#MEDIA_ROOT = os.path.join('/railway', 'media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'railway/media/')
 #MEDIA_ROOT = '/railway/media/'
 
 #STATIC_URL = 'static/'
