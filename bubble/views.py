@@ -377,12 +377,13 @@ def uploadPlants(request):
 
             custom_directory = 'flowerimages/'
             custom_path = os.path.join(settings.MEDIA_ROOT, custom_directory)
+            print(custom_path)
             if not os.path.exists(custom_path):
                 os.makedirs(custom_path)
             fs = FileSystemStorage(location=custom_path, base_url=os.path.join(settings.MEDIA_URL, custom_directory))
             filename = fs.save(myfile.name, myfile)
             uploaded_file_url = fs.url(filename).strip('media/')
-            
+            print(uploaded_file_url)
             flower = Flowers.objects.create(name=name,imagetitle=name,image=uploaded_file_url,details=details,
                                             cats_id=cats,subcat_id=subcat,
                                              price=price,offvalue=offvalue,adddate=adddate,is_active=is_active)
